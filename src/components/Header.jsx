@@ -6,7 +6,7 @@ export default function Header({ theme, accent, onToggleTheme, onToggleAccent })
   const menuButton = useRef(null);
   useEffect(() => {
     function onKey(event) { if (event.key === 'Escape' && open) { setOpen(false); menuButton.current?.focus(); } }
-    function onResize() { if (window.innerWidth > 1000) setOpen(false); }
+    function onResize() { if (window.innerWidth > 1200) setOpen(false); }
     document.addEventListener('keydown', onKey);
     window.addEventListener('resize', onResize);
     return () => { document.removeEventListener('keydown', onKey); window.removeEventListener('resize', onResize); };
