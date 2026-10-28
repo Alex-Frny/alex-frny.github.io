@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="theme-color" content="#0e0e0d" />
     <meta name="description" content="Alexis Fourny, développeur full-stack en formation à la recherche d’une alternance. Go, HTML, CSS, PHP et Git : découvrez mes projets et contactez-moi." />
     <link rel="canonical" href="https://alex-frny.github.io/" />
@@ -20,6 +21,8 @@
           savedAccent = localStorage.getItem('portfolio-ashen-accent');
         } catch {}
         document.documentElement.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
+        document.querySelector('meta[name="color-scheme"]').setAttribute('content', savedTheme === 'light' ? 'only light' : 'dark');
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', savedTheme === 'light' ? '#f0ece3' : '#0e0e0d');
         document.documentElement.dataset.accent = savedAccent === 'gold' ? 'gold' : 'ember';
       })();
     </script>

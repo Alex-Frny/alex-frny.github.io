@@ -26,7 +26,7 @@
   -webkit-font-smoothing: antialiased;
 }
 :root[data-theme='light'] {
-  color-scheme: light;
+  color-scheme: only light;
   --bg: #f0ece3;
   --surface: #f8f5ee;
   --surface-raised: #e7e0d2;
@@ -60,6 +60,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 108px; }
 body {
+  background-color: var(--bg);
   margin: 0;
   min-width: 320px;
   background-image: radial-gradient(ellipse at 95% 5%, color-mix(in srgb, var(--gold) 5%, transparent), transparent 38%), repeating-linear-gradient(0deg, transparent, transparent 3px, #a4916d03 4px);

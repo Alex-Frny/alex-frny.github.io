@@ -13,6 +13,7 @@ export default function App() {
   const [accent, setAccent] = useState(() => document.documentElement.dataset.accent || 'ember');
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    document.querySelector('meta[name="color-scheme"]')?.setAttribute('content', theme === 'light' ? 'only light' : 'dark');
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0e0e0d' : '#f0ece3');
     try { localStorage.setItem('portfolio-ashen-theme', theme); } catch { /* Stockage facultatif. */ }
   }, [theme]);
