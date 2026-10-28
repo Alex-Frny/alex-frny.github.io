@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e0e0d" />
+    <meta name="description" content="Alexis Fourny, développeur full-stack en formation à la recherche d’une alternance. Go, HTML, CSS, PHP et Git : découvrez mes projets et contactez-moi." />
+    <link rel="canonical" href="https://alex-frny.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alex-frny.github.io/" />
+    <meta property="og:title" content="Alexis Fourny — Développeur full-stack" />
+    <meta property="og:description" content="En formation à Zone 01, en recherche d’alternance. Découvrez mes projets en Go, HTML, CSS et PHP." />
+    <title>Alexis Fourny — Le code & la braise</title>
+    <script>
+      (() => {
+        let savedTheme, savedAccent;
+        try {
+          savedTheme = localStorage.getItem('portfolio-ashen-theme');
+          savedAccent = localStorage.getItem('portfolio-ashen-accent');
+        } catch {}
+        document.documentElement.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
+        document.documentElement.dataset.accent = savedAccent === 'gold' ? 'gold' : 'ember';
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
